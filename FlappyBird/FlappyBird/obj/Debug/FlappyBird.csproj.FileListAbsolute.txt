@@ -1,0 +1,15 @@
+C:\Users\edvin.hasic\Documents\GitHub\Chess\FlappyBird\FlappyBird\bin\Debug\FlappyBird.exe.config
+C:\Users\edvin.hasic\Documents\GitHub\Chess\FlappyBird\FlappyBird\bin\Debug\FlappyBird.exe
+C:\Users\edvin.hasic\Documents\GitHub\Chess\FlappyBird\FlappyBird\bin\Debug\FlappyBird.pdb
+C:\Users\edvin.hasic\Documents\GitHub\Chess\FlappyBird\FlappyBird\obj\Debug\FlappyBird.csprojAssemblyReference.cache
+C:\Users\edvin.hasic\Documents\GitHub\Chess\FlappyBird\FlappyBird\obj\Debug\MainWindow.g.cs
+C:\Users\edvin.hasic\Documents\GitHub\Chess\FlappyBird\FlappyBird\obj\Debug\App.g.cs
+C:\Users\edvin.hasic\Documents\GitHub\Chess\FlappyBird\FlappyBird\obj\Debug\FlappyBird_MarkupCompile.cache
+C:\Users\edvin.hasic\Documents\GitHub\Chess\FlappyBird\FlappyBird\obj\Debug\FlappyBird_MarkupCompile.lref
+C:\Users\edvin.hasic\Documents\GitHub\Chess\FlappyBird\FlappyBird\obj\Debug\MainWindow.baml
+C:\Users\edvin.hasic\Documents\GitHub\Chess\FlappyBird\FlappyBird\obj\Debug\FlappyBird.g.resources
+C:\Users\edvin.hasic\Documents\GitHub\Chess\FlappyBird\FlappyBird\obj\Debug\FlappyBird.Properties.Resources.resources
+C:\Users\edvin.hasic\Documents\GitHub\Chess\FlappyBird\FlappyBird\obj\Debug\FlappyBird.csproj.GenerateResource.cache
+C:\Users\edvin.hasic\Documents\GitHub\Chess\FlappyBird\FlappyBird\obj\Debug\FlappyBird.csproj.CoreCompileInputs.cache
+C:\Users\edvin.hasic\Documents\GitHub\Chess\FlappyBird\FlappyBird\obj\Debug\FlappyBird.exe
+C:\Users\edvin.hasic\Documents\GitHub\Chess\FlappyBird\FlappyBird\obj\Debug\FlappyBird.pdb
