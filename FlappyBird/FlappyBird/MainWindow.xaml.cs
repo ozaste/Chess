@@ -24,9 +24,9 @@ namespace FlappyBird
 
         DispatcherTimer gameTimer = new DispatcherTimer();
 
-        double Score;
+        double Score;       
         int gravity = 8;  // här sätter jag gravitation till 8 för att den alltid ska falla
-        bool gameOver;
+        bool gameOver;      
         Rect flappyBirdHitBox; // Jag använder "Rect" som fågeln hitbox
         public MainWindow()
         {
@@ -57,7 +57,7 @@ namespace FlappyBird
                 if ((string)x.Tag == "obs1" || (string)x.Tag == "obs2" || (string)x.Tag == "obs3")  // om dessa tags matchar med bilderna i canvasen kan 
                                                                                                     // vi lägga till alla funktioner. 
                 {
-                    Canvas.SetLeft(x, Canvas.GetLeft(x) - 10);   //här får jag rören att röra sig (även farten)
+                    Canvas.SetLeft(x, Canvas.GetLeft(x) - 8);   //här får jag rören att röra sig (även farten)
 
                     if(Canvas.GetLeft(x) < -100) //om den gått förbi den vänstra sidan av canvasen...
                     {
@@ -109,13 +109,13 @@ namespace FlappyBird
             gravity = 8;
         }
 
-        private void StartGame()  // I denna metods sätts alla värden om till start värden för att man ska kunna börja om.
+        private void StartGame()  // I denna metod sätts alla värden om till start värden för att man ska kunna börja om.
         {
-            MyCanvas.Focus();
+            MyCanvas.Focus();  //
 
-            int temp = 300;
+            int temp = 300;   //detta är positionen där molnen börjar
 
-            Score = 0;  
+            Score = 0;     // 0 är startpoänget.
 
             gameOver = false;
             Canvas.SetTop(flappyBird, 190);  // detta kommer att vara fågelns första position när man startar spelet. 
@@ -140,8 +140,8 @@ namespace FlappyBird
 
                 if ((string)x.Tag == "cloud")
                 {
-                    Canvas.SetLeft(x, 300 + temp);
-                    temp = 800;
+                    Canvas.SetLeft(x, 300 + temp);    // här sätts molnenns startposition
+                    temp = 800;   
                 }
 
             }
