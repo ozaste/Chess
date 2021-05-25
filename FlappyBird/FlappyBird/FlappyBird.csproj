@@ -63,6 +63,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Class2.cs" />
+    <Compile Include="FlappyBird.cs" />
+    <Compile Include="FlappyBird2.xaml.cs" />
+    <Compile Include="Functins.cs" />
+    <Compile Include="Functions.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -100,6 +106,9 @@
     <Resource Include="images\flappyBird.png" />
     <Resource Include="images\pipeBottom.png" />
     <Resource Include="images\pipeTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Coin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

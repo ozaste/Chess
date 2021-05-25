@@ -22,7 +22,7 @@ namespace FlappyBird
     public partial class MainWindow : Window
     {
 
-        DispatcherTimer gameTimer = new DispatcherTimer();  // 
+        DispatcherTimer gameTimer = new DispatcherTimer();  
 
         double Score;
         // här sätter jag gravitation till 8 för att den alltid ska falla
@@ -40,7 +40,7 @@ namespace FlappyBird
             StartGame();
         }
 
-        private void MainEventTimer(object sender, EventArgs e)
+        public void MainEventTimer(object sender, EventArgs e)
         {
             // här uppdateras poängen
             txtScore.Content = "Score: " + Score;  
@@ -56,6 +56,7 @@ namespace FlappyBird
                 EndGame();
             }
 
+            //nether
             // denna foreach loop får rören och molnen att röra på sig
             foreach (var x in MyCanvas.Children.OfType<Image>()) 
             {
@@ -76,6 +77,8 @@ namespace FlappyBird
                         Score += .5;     
                     
                     }
+                    //nether
+
 
                     // här ger jag rören deras hitbox
                     Rect pipeHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);  
@@ -85,10 +88,35 @@ namespace FlappyBird
                     {
                         EndGame();
                     }
+                    
+                }
+
+                if ((string)x.Tag == "coin")
+                {
+                    //här får jag coinen att röra sig (även farten)
+                    Canvas.SetLeft(x, Canvas.GetLeft(x) - 8);
+
+                    //om den gått förbi den vänstra sidan av canvasen...
+                    if (Canvas.GetLeft(x) < -100)
+                    {
+                        // flyttas den till den högra sidan.
+                        Canvas.SetLeft(x, 800);
+                         
+                        
+                        // här sätter jag hitbox för min coin
+                    }
+                    Rect CoinHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+                    if (flappyBirdHitBox.IntersectsWith(CoinHitBox))
+                    {
+                        Score += 5;
+
+                        // Den flyttas tillbaka bak i canvasen 
+                        Canvas.SetLeft(x, 750);
+                    }
                 }
 
 
-                if ((string)x.Tag == "cloud")
+                    if ((string)x.Tag == "cloud")
                 {
                     // här sätts farten för molnen
                     Canvas.SetLeft(x, Canvas.GetLeft(x) - 10);   
@@ -100,14 +128,17 @@ namespace FlappyBird
                         Canvas.SetLeft(x, 550); 
                     }
                 }
+                
+                
             }
+
         }
 
         /// <summary>
         /// // Denna metoden ska få fågeln att flyga upp när man håller ner space. 
         /// </summary>
         
-        private void KeyIsDown(object sender, KeyEventArgs e)  
+        public void KeyIsDown(object sender, KeyEventArgs e)  
         {
             // om space trycks ner ska fågeln rotera 20 grader upp och få -8 i gravitation som ska förestla att den flyger
             if (e.Key == Key.Space)  
@@ -124,7 +155,7 @@ namespace FlappyBird
         /// <summary>
         /// I denna metod kommer det vara tvärtemot. Alltså kommer fågeln falla när knappen inte trycks ner
         /// </summary>
-        private void KeyIsUp(object sender, KeyEventArgs e) 
+        public void KeyIsUp(object sender, KeyEventArgs e) 
                                                             // Och vridas 5 grder nedåt.
         {
             flappyBird.RenderTransform = new RotateTransform(5, flappyBird.Width / 2, flappyBird.Height / 2);
@@ -134,7 +165,7 @@ namespace FlappyBird
         /// <summary>
         /// I denna metod sätts alla värden om till start värden för att man ska kunna börja om.
         /// </summary>
-        private void StartGame() 
+        public void StartGame() 
         {
             // focus håller canvasen i focus medan spelet körs.
 
@@ -164,7 +195,7 @@ namespace FlappyBird
                 //här sätts avstånden såatt det är jämnt avstånd mellan rören.
                 if ((string)x.Tag == "obs3")
                 {
-                    //här sätts avstånden såatt det är jämnt avstånd mellan rören.
+                    //här sätts avstånden så att det är jämnt avstånd mellan rören.
                     Canvas.SetLeft(x, 1100);  
                 }
 
@@ -185,13 +216,13 @@ namespace FlappyBird
         /// <summary>
         /// Denna metod ska avsluta spelet. 
         /// </summary>
-        private void EndGame()  
+        public void EndGame()  
         {
             gameTimer.Stop();   
             gameOver = true;
             txtScore.Content += "        Game Over! Press R to try again";
         }
 
-
+       
     }
 }
